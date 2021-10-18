@@ -15,6 +15,10 @@ STAGE="$(mktemp -d)"
 if [ ! -f "${ENV_DIR}/APP_BASE" ]; then
     echo "APP_BASE was not set. Aborting" | indent
     exit 1
+
+elif [ ! -f "${ENV_DIR}/PROJECT_NAME" ]; then
+    echo "PROJECT_NAME was not set. Aborting" | indent
+    exit 1
 fi
 
 APP_BASE="$(cat "${ENV_DIR}/APP_BASE")"
