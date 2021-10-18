@@ -2,7 +2,7 @@
 
 if [ -f "$1/"] || [ -f "$1/nx.json"] || [ -f "$1/workspace.json"]; then
     echo "Nx workspace"
-
+    exit 0
 else
     exit 1
 
